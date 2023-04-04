@@ -8,7 +8,7 @@
 
 ## Test Instructions
 
-1. Create a new branch from master
+1. Create a new branch from main
 2. Create a service that pulls listings from https://642babccd7081590f926e18c.mockapi.io/api/v1/listings
 3. Create a page that displays the listings
 4. Create a page that displays data for a single listing once clicked
