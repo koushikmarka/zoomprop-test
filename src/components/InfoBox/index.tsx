@@ -1,13 +1,7 @@
-import TotalOrderLineChartCard from '../Cards/TotalOrderLineChartCard'
-import { thousands, getPercentage, isNegative } from '@/utils'
+// import TotalOrderLineChartCard from '../Cards/TotalOrderLineChartCard'
+import { thousands, getPercentage } from '@/utils'
 import InfoIcon from '@mui/icons-material/Info'
-import {
-  Box,
-  CircularProgress,
-  Skeleton,
-  Tooltip,
-  Typography,
-} from '@mui/material'
+import { Box, Skeleton, Tooltip, Typography } from '@mui/material'
 import { useTheme } from '@mui/system'
 
 type InfoBoxProps = {
@@ -106,30 +100,31 @@ const InfoBox = ({
                   </Typography>
                 </Box>
               ) : (
-                <TotalOrderLineChartCard
-                  title={item.name}
-                  value={
-                    item.value === undefined ? (
-                      <CircularProgress size={20} />
-                    ) : item.type === 'percentage' ? (
-                      getPercentage(item.value)
-                    ) : (
-                      thousands(item.value)
-                    )
-                  }
-                  isLoading={false}
-                  percentage={
-                    item?.data?.percent && (
-                      <>{getPercentage(item?.data?.percent)}</>
-                    )
-                  }
-                  count={item.count}
-                  graph={item?.data?.countHistory}
-                  trajectory={
-                    item?.data?.percent && !isNegative(item?.data?.percent)
-                  }
-                  url={item.link}
-                />
+                <></>
+                // <TotalOrderLineChartCard
+                //   title={item.name}
+                //   value={
+                //     item.value === undefined ? (
+                //       <CircularProgress size={20} />
+                //     ) : item.type === 'percentage' ? (
+                //       getPercentage(item.value)
+                //     ) : (
+                //       thousands(item.value)
+                //     )
+                //   }
+                //   isLoading={false}
+                //   percentage={
+                //     item?.data?.percent && (
+                //       <>{getPercentage(item?.data?.percent)}</>
+                //     )
+                //   }
+                //   count={item.count}
+                //   graph={item?.data?.countHistory}
+                //   trajectory={
+                //     item?.data?.percent && !isNegative(item?.data?.percent)
+                //   }
+                //   url={item.link}
+                // />
               )}
             </Box>
           ))
