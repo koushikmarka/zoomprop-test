@@ -1,7 +1,7 @@
 import { ConfigProps } from '@/types/config'
 
 const config: ConfigProps = {
-  fontFamily: `'Roboto Mono', sans-serif`,
+  fontFamily: `'Roboto', sans-serif`,
   borderRadius: 8,
   outlinedFilled: true,
   navType: 'dark', // light, dark
